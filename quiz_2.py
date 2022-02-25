@@ -14,6 +14,7 @@ y_labels = iris.target
 parameter_values = [0.5, 2.5, -2.5, -2.5, 2.5]
 learning_rate = 0.01
 
+print (X_data[0])
 # 𝐻(0)=0.5 <-- threshold for heavyside
 
 # EPOCH 1 and 2
