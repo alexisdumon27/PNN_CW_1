@@ -1,1 +1,0 @@
-print ("maximum pooping power")
