@@ -49,9 +49,11 @@ pat = 10 #this is the number of epochs with no improvement after which the train
 early_stopping = EarlyStopping(monitor='val_loss', patience=pat, verbose=1) # validation loss is monitored
 
 
-history = model.fit(x_train, y_train, epochs=100, callbacks=[early_stopping], validation_data=(x_test, y_test), batch_size=256)
+history = model.fit(x_train, y_train, epochs=100, callbacks=[early_stopping], validation_data=(x_test, y_test), batch_size=51)
 
+from tensorflow.keras.models import load_model
 
+model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
 
 outputs = model.predict(x_test)
 labels_predicted = np.argmax(outputs, axis=1)
