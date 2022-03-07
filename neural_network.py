@@ -8,6 +8,8 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import EarlyStopping
 
+# Hyperopt and Hyperas packages needed for the hyperparameter tuning
+
 (x_train, labels_train), (x_test, labels_test) = mnist.load_data()
 
 x_train = x_train.astype('float32')
@@ -39,8 +41,8 @@ model.add(Dense(10, activation='softmax'))
 # the metric that will be printed during each epoch
 model.compile(loss="categorical_crossentropy", optimizer= 'sgd', metrics=['accuracy'])
 
-print (x_train.shape)
-print (x_test.shape)
+# print (x_train.shape)
+# print (x_test.shape)
 
 model.summary()
 callbacks = []
